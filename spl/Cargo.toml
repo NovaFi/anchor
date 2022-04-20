@@ -1,6 +1,6 @@
 [package]
 name = "nove-anchor-spl"
-version = "0.24.3"
+version = "0.24.4"
 authors = ["Serum Foundation <foundation@projectserum.com>"]
 rust-version = "1.56"
 edition = "2021"
