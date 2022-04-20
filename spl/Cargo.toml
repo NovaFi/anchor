@@ -15,7 +15,6 @@ associated_token = ["spl-associated-token-account"]
 governance = []
 shmem = []
 devnet = []
-localnet = []
 dex = ["serum_dex"]
 
 [dependencies]
