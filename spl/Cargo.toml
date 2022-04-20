@@ -1,5 +1,5 @@
 [package]
-name = "anchor-spl"
+name = "nove-anchor-spl"
 version = "0.24.2"
 authors = ["Serum Foundation <foundation@projectserum.com>"]
 rust-version = "1.56"
@@ -15,6 +15,7 @@ associated_token = ["spl-associated-token-account"]
 governance = []
 shmem = []
 devnet = []
+localnet = []
 dex = ["serum_dex"]
 
 [dependencies]

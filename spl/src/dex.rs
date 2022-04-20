@@ -14,6 +14,9 @@ anchor_lang::solana_program::declare_id!("9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9P
 #[cfg(feature = "devnet")]
 anchor_lang::solana_program::declare_id!("DESVgJVGajEgKGXhb6XmqDHGz3VjdgP7rEVESBgxmroY");
 
+#[cfg(feature = "localnet")]
+anchor_lang::solana_program::declare_id!("7RA6GmbCYRBB66QfuDa1peHAE2fWDbeR7Vr2sGmNtGFC");
+
 #[allow(clippy::too_many_arguments)]
 pub fn new_order_v3<'info>(
     ctx: CpiContext<'_, '_, '_, 'info, NewOrderV3<'info>>,
