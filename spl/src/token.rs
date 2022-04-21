@@ -1,10 +1,11 @@
-use anchor_lang::solana_program;
-use anchor_lang::solana_program::account_info::AccountInfo;
-use anchor_lang::solana_program::entrypoint::ProgramResult;
-use anchor_lang::solana_program::program_error::ProgramError;
-use anchor_lang::solana_program::program_pack::Pack;
-use anchor_lang::solana_program::pubkey::Pubkey;
-use anchor_lang::{Accounts, CpiContext};
+use karima_anchor_lang::prelude::*;
+use karima_anchor_lang::solana_program;
+use karima_anchor_lang::solana_program::account_info::AccountInfo;
+use karima_anchor_lang::solana_program::entrypoint::ProgramResult;
+use karima_anchor_lang::solana_program::program_error::ProgramError;
+use karima_anchor_lang::solana_program::program_pack::Pack;
+use karima_anchor_lang::solana_program::pubkey::Pubkey;
+use karima_anchor_lang::{Accounts, CpiContext};
 use std::io::Write;
 use std::ops::Deref;
 
@@ -320,7 +321,7 @@ impl TokenAccount {
     pub const LEN: usize = spl_token::state::Account::LEN;
 }
 
-impl anchor_lang::AccountDeserialize for TokenAccount {
+impl karima_anchor_lang::AccountDeserialize for TokenAccount {
     fn try_deserialize(buf: &mut &[u8]) -> Result<Self, ProgramError> {
         TokenAccount::try_deserialize_unchecked(buf)
     }
@@ -330,14 +331,14 @@ impl anchor_lang::AccountDeserialize for TokenAccount {
     }
 }
 
-impl anchor_lang::AccountSerialize for TokenAccount {
+impl karima_anchor_lang::AccountSerialize for TokenAccount {
     fn try_serialize<W: Write>(&self, _writer: &mut W) -> Result<(), ProgramError> {
         // no-op
         Ok(())
     }
 }
 
-impl anchor_lang::Owner for TokenAccount {
+impl karima_anchor_lang::Owner for TokenAccount {
     fn owner() -> Pubkey {
         ID
     }
@@ -358,7 +359,7 @@ impl Mint {
     pub const LEN: usize = spl_token::state::Mint::LEN;
 }
 
-impl anchor_lang::AccountDeserialize for Mint {
+impl karima_anchor_lang::AccountDeserialize for Mint {
     fn try_deserialize(buf: &mut &[u8]) -> Result<Self, ProgramError> {
         Mint::try_deserialize_unchecked(buf)
     }
@@ -368,14 +369,14 @@ impl anchor_lang::AccountDeserialize for Mint {
     }
 }
 
-impl anchor_lang::AccountSerialize for Mint {
+impl karima_anchor_lang::AccountSerialize for Mint {
     fn try_serialize<W: Write>(&self, _writer: &mut W) -> Result<(), ProgramError> {
         // no-op
         Ok(())
     }
 }
 
-impl anchor_lang::Owner for Mint {
+impl karima_anchor_lang::Owner for Mint {
     fn owner() -> Pubkey {
         ID
     }
@@ -392,7 +393,7 @@ impl Deref for Mint {
 #[derive(Clone)]
 pub struct Token;
 
-impl anchor_lang::AccountDeserialize for Token {
+impl karima_anchor_lang::AccountDeserialize for Token {
     fn try_deserialize(buf: &mut &[u8]) -> Result<Self, ProgramError> {
         Token::try_deserialize_unchecked(buf)
     }
@@ -402,7 +403,7 @@ impl anchor_lang::AccountDeserialize for Token {
     }
 }
 
-impl anchor_lang::Id for Token {
+impl karima_anchor_lang::Id for Token {
     fn id() -> Pubkey {
         ID
     }
