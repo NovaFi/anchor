@@ -1,5 +1,5 @@
 [package]
-name = "anchor-spl"
+name = "karima-anchor-spl"
 version = "0.19.0"
 authors = ["Serum Foundation <foundation@projectserum.com>"]
 edition = "2018"
