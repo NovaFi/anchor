@@ -11,7 +11,7 @@ use std::num::NonZeroU64;
 pub use serum_dex;
 
 #[cfg(not(feature = "devnet"))]
-anchor_lang::solana_program::declare_id!("9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin");
+anchor_lang::solana_program::declare_id!("7RA6GmbCYRBB66QfuDa1peHAE2fWDbeR7Vr2sGmNtGFC");
 
 #[cfg(feature = "devnet")]
 anchor_lang::solana_program::declare_id!("DESVgJVGajEgKGXhb6XmqDHGz3VjdgP7rEVESBgxmroY");
