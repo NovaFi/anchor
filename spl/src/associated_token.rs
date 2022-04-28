@@ -1,8 +1,8 @@
-use karima_anchor_lang::solana_program::account_info::AccountInfo;
-use karima_anchor_lang::solana_program::entrypoint::ProgramResult;
-use karima_anchor_lang::solana_program::program_error::ProgramError;
-use karima_anchor_lang::solana_program::pubkey::Pubkey;
-use karima_anchor_lang::{Accounts, CpiContext};
+use anchor_lang::solana_program::account_info::AccountInfo;
+use anchor_lang::solana_program::entrypoint::ProgramResult;
+use anchor_lang::solana_program::program_error::ProgramError;
+use anchor_lang::solana_program::pubkey::Pubkey;
+use anchor_lang::{Accounts, CpiContext};
 
 pub use spl_associated_token_account::{get_associated_token_address, ID};
 

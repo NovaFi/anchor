@@ -1,5 +1,5 @@
 [package]
-name = "karima-anchor-spl"
+name = "NT-anchor-spl"
 version = "0.19.0"
 authors = ["Serum Foundation <foundation@projectserum.com>"]
 edition = "2018"
@@ -7,7 +7,7 @@ license = "Apache-2.0"
 description = "CPI clients for SPL programs"
 
 [features]
-default = ["mint", "token", "associated_token"]
+default = ["mint", "token", "associated_token","dex"]
 mint = []
 token = []
 associated_token = []
@@ -17,7 +17,7 @@ devnet = []
 dex = ["serum_dex"]
 
 [dependencies]
-karima-anchor-lang = { version = "0.19.0", features = ["derive"] }
+NT-anchor-lang = { version = "0.19.0", features = ["derive"] }
 serum_dex = { git = "https://github.com/project-serum/serum-dex", rev = "1be91f2", version = "0.4.0", features = ["no-entrypoint"], optional = true }
 solana-program = "1.8.0"
 spl-token = { version = "3.1.1", features = ["no-entrypoint"] }

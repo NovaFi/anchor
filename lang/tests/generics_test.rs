@@ -1,5 +1,5 @@
 #![allow(dead_code)]
-
+pub use NT_anchor_lang as anchor_lang;
 use anchor_lang::prelude::borsh::maybestd::io::Write;
 use anchor_lang::prelude::*;
 use borsh::{BorshDeserialize, BorshSerialize};

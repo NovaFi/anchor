@@ -1,4 +1,4 @@
-use karima_anchor_lang::solana_program::declare_id;
+use NT_anchor_lang::solana_program::declare_id;
 
 pub use srm::ID as SRM;
 mod srm {
